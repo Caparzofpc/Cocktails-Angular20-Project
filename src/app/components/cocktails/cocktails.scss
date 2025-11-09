@@ -1,5 +1,9 @@
+/**
+ * Styles du conteneur cocktails
+ * Organisation en deux colonnes égales avec espacement
+ */
 :host {
-  display: flex;
-  gap: 1.5rem;
-  padding: 1.5rem;
+  display: flex; // Layout horizontal pour placer liste et détails côte à côte
+  gap: 1.5rem; // Espacement de 24px entre les deux colonnes
+  padding: 1.5rem; // Espacement interne de 24px autour du contenu
 }

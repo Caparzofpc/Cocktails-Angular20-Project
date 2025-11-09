@@ -1,5 +1,9 @@
+/**
+ * Styles du composant racine
+ * :host cible l'élément hôte du composant (app-root dans le DOM)
+ */
 :host {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  min-height: 100vh; // Hauteur minimale = toute la hauteur de la fenêtre
+  display: flex; // Layout flexbox
+  flex-direction: column; // Organisation verticale : header -> contenu -> footer
 }

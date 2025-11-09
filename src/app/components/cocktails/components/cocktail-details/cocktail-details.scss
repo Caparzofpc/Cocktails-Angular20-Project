@@ -1,4 +1,8 @@
+/**
+ * Styles du composant CocktailDetails
+ * Organisation verticale des éléments (image, titre, description)
+ */
 :host {
-  display: flex;
-  flex-direction: column;
+  display: flex; // Layout flexbox
+  flex-direction: column; // Organisation verticale : image -> nom -> description
 }

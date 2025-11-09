@@ -1,8 +1,12 @@
+/**
+ * Styles du header
+ * :host représente le composant <app-header> dans le DOM
+ */
 :host {
-  display: flex;
-  align-items: center;
-  background-color: var(--primary);
-  color: white;
-  height: 3.5rem;
-  padding: 0 16px;
+  display: flex; // Layout horizontal
+  align-items: center; // Centre les éléments verticalement
+  background-color: var(--primary); // Couleur violette définie dans les variables
+  color: white; // Texte blanc pour le contraste
+  height: 3.5rem; // Hauteur fixe du header (56px)
+  padding: 0 16px; // Espacement horizontal interne
 }

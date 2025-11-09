@@ -1,8 +1,12 @@
+/**
+ * Styles du footer
+ * :host représente le composant <app-footer> dans le DOM
+ */
 :host {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--gray-700);
-  color: white;
-  height: 2rem;
+  display: flex; // Layout flexbox
+  align-items: center; // Centre verticalement
+  justify-content: center; // Centre horizontalement
+  background-color: var(--gray-700); // Fond gris foncé
+  color: white; // Texte blanc
+  height: 2rem; // Hauteur fixe du footer (32px)
 }

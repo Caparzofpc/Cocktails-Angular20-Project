@@ -1,4 +1,10 @@
+<!-- Image du cocktail - binding de la propriété src vers cocktail.imageUrl -->
 <img alt="un cocktail" class="mb-20" [src]="cocktail.imageUrl" />
+<!-- Version commentée avec attribut fill (pour optimisation future) -->
 <!-- <img alt="un cocktail" class="mb-20" fill [src]="cocktail.imageUrl" /> -->
+
+<!-- Nom du cocktail - interpolation avec {{ }} -->
 <h3 class="mb-20">{{ cocktail.name }}</h3>
+
+<!-- Description complète du cocktail - interpolation avec {{ }} -->
 <p class="mb-20">{{ cocktail.description }}</p>
