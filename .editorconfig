@@ -1,17 +1,59 @@
-# Editor configuration, see https://editorconfig.org
+# ========================================
+# Configuration EditorConfig
+# ========================================
+# EditorConfig permet de maintenir des styles de codage cohérents
+# entre différents éditeurs et IDE (VS Code, WebStorm, Sublime, etc.)
+# Documentation : https://editorconfig.org
+
+# Indique que c'est le fichier de config racine (arrête la recherche de configs parents)
 root = true
 
+# ========================================
+# Configuration par défaut pour TOUS les fichiers
+# ========================================
 [*]
+
+# Encodage des caractères : UTF-8 pour supporter tous les caractères internationaux
 charset = utf-8
+
+# Style d'indentation : utiliser des espaces plutôt que des tabulations
+# Les espaces garantissent un rendu identique dans tous les éditeurs
 indent_style = space
+
+# Nombre d'espaces par niveau d'indentation
+# 2 espaces est le standard pour JavaScript/TypeScript/HTML/CSS
 indent_size = 2
+
+# Ajoute automatiquement une ligne vide à la fin de chaque fichier
+# Requis par la norme POSIX et évite les warnings Git
 insert_final_newline = true
+
+# Supprime automatiquement les espaces en fin de ligne
+# Garde le code propre et évite les diffs Git inutiles
 trim_trailing_whitespace = true
 
+# ========================================
+# Configuration spécifique aux fichiers TypeScript
+# ========================================
 [*.ts]
+
+# Type de quotes à utiliser : simples (') plutôt que doubles (")
+# Cohérent avec Prettier et ESLint
 quote_type = single
+
+# Configuration IntelliJ/WebStorm : ne pas utiliser de quotes doubles
+# Assure la cohérence avec la règle précédente
 ij_typescript_use_double_quotes = false
 
+# ========================================
+# Configuration spécifique aux fichiers Markdown
+# ========================================
 [*.md]
+
+# Désactive la limite de longueur de ligne pour Markdown
+# Les longues lignes sont courantes dans la documentation
 max_line_length = off
+
+# Ne pas supprimer les espaces en fin de ligne dans Markdown
+# Deux espaces en fin de ligne créent un saut de ligne en Markdown
 trim_trailing_whitespace = false

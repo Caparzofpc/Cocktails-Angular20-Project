@@ -1,25 +1,58 @@
-{ ? // Largeur maximale d'une ligne avant retour automatique à la ligne
-    "printWidth"
-  : 100, ? // Nombre d'espaces par tabulation
-    "tabWidth"
-  : 2, ? // Utiliser des espaces plutôt que des tabs
-    "useTabs"
-  : false, ? // Ajouter un point-virgule à la fin des instructions
-    "semi"
-  : true, ? // Utiliser des quotes simples plutôt que doubles
-    "singleQuote"
-  : true, ? // Espaces à l'intérieur des accolades
-    "bracketSpacing"
-  : true, ? // Parenthèses autour des arguments de fonction fléchée
-    "arrowParens"
-  : 'always', ? // Fin de ligne LF (Linux/macOS) pour compatibilité cross-OS
-    "endOfLine"
-  : 'lf', // Ajoute une virgule finale partout (objets, tableaux, ? fonctions)
-    "trailingComma"
-  : 'all', ? // Met des quotes sur les propriétés uniquement si nécessaire
-    "quoteProps"
-  : 'as-needed', ? // Ignore la sensibilité aux espaces dans les templates HTML (utile pour Angular)
-    "htmlWhitespaceSensitivity"
-  : 'ignore', ? // Formate automatiquement le code embedded (JS/TS/CSS/HTML) dans un autre fichier
-    "embeddedLanguageFormatting"
-  : 'auto' }
+# ========================================
+# Configuration Prettier
+# ========================================
+# Prettier est un formateur de code automatique qui assure
+# une mise en forme cohérente dans tout le projet.
+# Il fonctionne avec JavaScript, TypeScript, HTML, CSS, JSON, etc.
+
+# Largeur maximale d'une ligne avant retour automatique à la ligne
+# 100 caractères est un bon compromis entre lisibilité et utilisation de l'écran
+printWidth: 100
+
+# Nombre d'espaces par niveau d'indentation
+# 2 espaces est le standard pour JavaScript/TypeScript
+tabWidth: 2
+
+# Utiliser des espaces plutôt que des tabulations
+# Les espaces garantissent un rendu identique partout
+useTabs: false
+
+# Ajouter un point-virgule à la fin des instructions
+# true pour suivre le style JavaScript classique
+semi: true
+
+# Utiliser des quotes simples ('') plutôt que doubles ("")
+# Cohérent avec la config ESLint et la convention JavaScript moderne
+singleQuote: true
+
+# Espaces à l'intérieur des accolades pour les objets
+# Exemple : { foo: 'bar' } au lieu de {foo: 'bar'}
+bracketSpacing: true
+
+# Parenthèses autour des arguments des fonctions fléchées
+# 'always' : (x) => x  au lieu de  x => x
+# Plus cohérent quand il y a plusieurs paramètres
+arrowParens: always
+
+# Fin de ligne : LF (Line Feed - style Unix/Linux/macOS)
+# Assure la compatibilité cross-platform (évite les conflits Git)
+endOfLine: lf
+
+# Ajoute une virgule finale partout où c'est possible
+# Facilite l'ajout de nouvelles lignes sans modifier la ligne précédente
+# Améliore les diffs Git
+trailingComma: all
+
+# Quotes sur les propriétés d'objets uniquement si nécessaire
+# Exemple : { foo: 1 } au lieu de { 'foo': 1 }
+# Mais : { 'foo-bar': 1 } quand le nom contient un tiret
+quoteProps: as-needed
+
+# Gestion des espaces dans les templates HTML
+# 'ignore' : Prettier ne modifie pas les espaces dans le HTML
+# Utile pour Angular où les espaces peuvent avoir une importance
+htmlWhitespaceSensitivity: ignore
+
+# Formate automatiquement le code embedded (JS/TS/CSS dans HTML)
+# 'auto' : détection automatique du langage et formatage approprié
+embeddedLanguageFormatting: auto
